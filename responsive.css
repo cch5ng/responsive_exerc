@@ -11,6 +11,22 @@
   order: 10;
 }
 
+/* minor breakpoint */
+
+@media screen and (min-width: 350px) and (max-width: 549px) {
+  .weather__today__temp {
+    font-size: 2em;
+  }
+
+  .weather__next__item span {
+    font-size: 16px;
+  }
+
+  .weather__next__image {
+    max-width: 85%;
+  }
+}
+
 @media screen and (max-width: 549px) {
   .header__logo {
     height: 48px;

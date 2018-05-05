@@ -133,6 +133,16 @@ main {
  *
  */
 
+h3 {
+  font-size: 18px;
+}
+
+p,
+.top-news__item {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
 
 /*
  *
