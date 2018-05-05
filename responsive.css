@@ -138,6 +138,10 @@
     width: 40%;
   }
 
+  .snippet__thumbnail {
+    width: 100%;
+    max-width: 25%;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -155,6 +159,15 @@
   .weather {
     order: 3;
   }
+
+  .snippet {
+    border-bottom: none;
+  }
+
+  .snippet__thumbnail {
+    margin-bottom: 8px;
+  }
+
 }
 
 @media screen and (min-width: 850px) {
@@ -163,4 +176,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+/*  .snippet__thumbnail {
+    width: 100%;
+    max-width: 33%;
+  }
+*/
 }

@@ -335,10 +335,12 @@ p,
 .snippet {
   clear: both;
   margin: 24px 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .snippet__thumbnail {
-  width: 100px;
+  /*width: 100px;*/
+  max-width: 100%;
   float: left;
   margin-right: 1em;
 }
