@@ -7,7 +7,7 @@
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
   </head>
   <body>
 
@@ -17,8 +17,12 @@
         <h1 class="header__title">
           The Brighton Times
         </h1>
+        <a id="menu" class="header__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
       </div>
-      <div><i class="fas fa-bars" id="menu"></i></div>
     </header>
 
     <nav id="drawer" class="nav">
@@ -62,6 +66,7 @@
             <thead>
               <tr>
                 <th>date</th>
+                <th class="scores__location">location</th>
                 <th>team</th>
                 <th colspan="2">score</th>
                 <th>team</th>
@@ -70,6 +75,7 @@
             <tbody>
               <tr>
                 <td>Friday</td>
+                <td class="scores__location">Brighton</td>
                 <td>Bears</td>
                 <td>95</td>
                 <td class="winner">109</td>
@@ -77,6 +83,7 @@
               </tr>
               <tr>
                 <td>Friday</td>
+                <td class="scores__location">Worthington</td>
                 <td class="winner">Otters</td>
                 <td class="winner">3</td>
                 <td>1</td>
@@ -84,6 +91,7 @@
               </tr>
               <tr>
                 <td>Saturday</td>
+                <td class="scores__location">Littlehampton</td>
                 <td class="winner">Wolves</td>
                 <td class="winner">7</td>
                 <td>0</td>
@@ -91,6 +99,7 @@
               </tr>
               <tr>
                 <td>Sunday</td>
+                <td class="scores__location">Portslade</td>
                 <td>Hawks</td>
                 <td>11</td>
                 <td class="winner">12</td>
@@ -98,6 +107,7 @@
               </tr>
               <tr>
                 <td>Sunday</td>
+                <td class="scores__location">Hove</td>
                 <td class="winner">Stags</td>
                 <td class="winner">6</td>
                 <td>2</td>
@@ -112,7 +122,7 @@
           <span class="weather__location">Brighton, UK</span>
           <span class="weather__desc">Sunny</span>
           <span class="weather__today">
-          <img class="weather__today__image" src="images/weather.png" alt="icon of a partially sunny day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
+          <img class="weather__today__image" src="images/weather.png" alt="icon of a partially cloudy day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
           </span>
           <ul class="weather__next">
             <li class="weather__next__item">
@@ -181,13 +191,21 @@
       </footer>
     </main>
     <script>
-      const menu = document.getElementById('menu');
-      const drawer = document.getElementById('drawer');
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
       menu.addEventListener('click', function(e) {
-        console.log('clicked menu')
         drawer.classList.toggle('open');
         e.stopPropagation();
       });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
     </script>
   </body>
 </html>
