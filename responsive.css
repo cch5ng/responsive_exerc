@@ -52,6 +52,15 @@
     width: 32px;
     fill: #E0E0E0;
   }
+
+  /* responsive table */
+  .loser {
+    display: none;
+  }
+
+  .winner {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -63,6 +72,7 @@
     order: 1;
     width: 40%;
   }
+
 }
 
 @media screen and (min-width: 700px) {
